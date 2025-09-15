@@ -1,0 +1,79 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>IBlock | AutoBE</title><meta name="description" content="Documentation for AutoBE"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">AutoBE</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="../modules/_autobe_interface.html">@autobe/interface</a></li><li><a href="../modules/_autobe_interface.AutoBeTest.html">AutoBeTest</a></li><li><a href="" aria-current="page">IBlock</a></li></ul><h1>Interface IBlock</h1></div><section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography"><p>Block for grouping statements in specific structural contexts.</p>
+<p><strong>SPECIAL USE ONLY</strong>: This type represents a block of statements and should
+only be used in specific contexts where statement grouping is structurally
+required:</p>
+<ul>
+<li>
+<p>If/else statement branches</p>
+<ul>
+<li><a href="_autobe_interface.AutoBeTest.IIfStatement.html#thenstatement" class="tsd-kind-property">IIfStatement.thenStatement</a></li>
+<li><a href="_autobe_interface.AutoBeTest.IIfStatement.html#elsestatement" class="tsd-kind-property">IIfStatement.elseStatement</a></li>
+</ul>
+</li>
+<li>
+<p>Arrow function bodies: <a href="_autobe_interface.AutoBeTest.IArrowFunction.html#body" class="tsd-kind-property">IArrowFunction.body</a></p>
+</li>
+<li>
+<p>Other contexts requiring explicit block scoping</p>
+</li>
+</ul>
+<p>Unlike a block statement, this is not a statement itself but a structural
+container for statements. For normal test function flow, use individual
+statements directly rather than wrapping them in blocks.</p>
+<p><strong>Updated for API-first workflow</strong>: Blocks can now contain
+<code>IApiOperateStatement</code> for API operations with automatic data capture,
+predicate expressions for validations, and other statement types as needed
+within conditional logic or function bodies.</p>
+<p>AI function calling restriction: Do not use for general statement grouping
+in main function flow. Reserve for structural requirements only
+(conditional branches, function bodies).</p>
+</div><div class="tsd-comment tsd-typography"></div></section><div class="tsd-signature"><span class="tsd-signature-keyword">interface</span> <span class="tsd-kind-interface">IBlock</span> <span class="tsd-signature-symbol">{</span><br/>    <a class="tsd-kind-property" href="#statements">statements</a><span class="tsd-signature-symbol">:</span> <a href="../types/_autobe_interface.AutoBeTest.IStatement.html" class="tsd-signature-type tsd-kind-type-alias">IStatement</a><span class="tsd-signature-symbol">[]</span> <span class="tsd-signature-symbol">&amp;</span> <span class="tsd-signature-type">MinItems</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#type">type</a><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;block&quot;</span><span class="tsd-signature-symbol">;</span><br/><span class="tsd-signature-symbol">}</span></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L263">test/AutoBeTest.ts:263</a></li></ul></aside><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h5 class="tsd-index-heading uppercase">Index</h5></summary><div class="tsd-accordion-details"><section class="tsd-index-section"><h3 class="tsd-index-heading">Properties</h3><div class="tsd-index-list"><a href="#statements" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>statements</span></a>
+<a href="#type" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>type</span></a>
+</div></section></div></details></section></section><details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h2>Properties</h2></summary><section><section class="tsd-panel tsd-member"><h3 class="tsd-anchor-link" id="statements"><span>statements</span><a href="#statements" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">statements</span><span class="tsd-signature-symbol">:</span> <a href="../types/_autobe_interface.AutoBeTest.IStatement.html" class="tsd-signature-type tsd-kind-type-alias">IStatement</a><span class="tsd-signature-symbol">[]</span> <span class="tsd-signature-symbol">&amp;</span> <span class="tsd-signature-type">MinItems</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">1</span><span class="tsd-signature-symbol">&gt;</span></div><div class="tsd-comment tsd-typography"><p>Nested statements within this block.</p>
+<p>Each statement represents a step within the grouped operation. Can
+include any valid statement type:</p>
+<ul>
+<li><code>IApiOperateStatement</code> for API operations with automatic data capture
+within conditional logic</li>
+<li>Predicate expressions for validations within blocks</li>
+<li>Other statement types as needed for the block's purpose</li>
+</ul>
+<p>Maintains the same ordering significance as the root function's
+statements array.</p>
+<p><strong>🚨 CRITICAL: DO NOT PUT EXPRESSIONS DIRECTLY IN STATEMENTS ARRAY! 🚨</strong></p>
+<p>This array ONLY accepts <code>IStatement</code> types. If you need to execute an
+expression (like predicates, function calls, etc.), you MUST wrap it in
+<code>IExpressionStatement</code>:</p>
+<p><strong>❌ WRONG - Expression directly in statements array</strong>:</p>
+<pre><code class="typescript"><span class="hl-7">statements</span><span class="hl-0">: [</span><br/><span class="hl-0">  { </span><span class="hl-1">type:</span><span class="hl-0"> </span><span class="hl-4">&quot;apiOperateStatement&quot;</span><span class="hl-0">, ... },</span><br/><span class="hl-0">  { </span><span class="hl-1">type:</span><span class="hl-0"> </span><span class="hl-4">&quot;conditionalPredicate&quot;</span><span class="hl-0">, ... }  </span><span class="hl-6">// ❌ This is IExpression, not IStatement!</span><br/><span class="hl-0">]</span>
+</code><button type="button">Copy</button></pre>
+
+<p><strong>✅ CORRECT - Expression wrapped in IExpressionStatement</strong>:</p>
+<pre><code class="typescript"><span class="hl-7">statements</span><span class="hl-0">: [</span><br/><span class="hl-0">  { </span><span class="hl-1">type:</span><span class="hl-0"> </span><span class="hl-4">&quot;apiOperateStatement&quot;</span><span class="hl-0">, ... },</span><br/><span class="hl-0">  {</span><br/><span class="hl-0">    </span><span class="hl-1">type:</span><span class="hl-0"> </span><span class="hl-4">&quot;expressionStatement&quot;</span><span class="hl-0">,  </span><span class="hl-6">// ✅ Statement wrapper</span><br/><span class="hl-0">    </span><span class="hl-1">expression:</span><span class="hl-0"> {</span><br/><span class="hl-0">      </span><span class="hl-1">type:</span><span class="hl-0"> </span><span class="hl-4">&quot;conditionalPredicate&quot;</span><span class="hl-0">, ... </span><span class="hl-6">// ✅ Expression properly contained</span><br/><span class="hl-0">    }</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">]</span>
+</code><button type="button">Copy</button></pre>
+
+<p><strong>Statement Types (can go directly in array)</strong>:</p>
+<ul>
+<li><code>IApiOperateStatement</code></li>
+<li><code>IExpressionStatement</code></li>
+<li><code>IIfStatement</code></li>
+<li><code>IReturnStatement</code></li>
+<li><code>IThrowStatement</code></li>
+</ul>
+<p><strong>Expression Types (must be wrapped in IExpressionStatement)</strong>:</p>
+<ul>
+<li><code>IEqualPredicate</code>, <code>IConditionalPredicate</code>, etc.</li>
+<li><code>ICallExpression</code></li>
+<li>All literal types and random generators</li>
+<li>Any other <code>IExpression</code> type</li>
+</ul>
+<p>Example business context - Block: &quot;Premium Customer Workflow&quot;</p>
+<ul>
+<li>API operation: Verify premium status (with automatic data capture)</li>
+<li>API operation: Access exclusive content (with automatic data capture)</li>
+<li>Predicate: Validate premium features are available (wrapped in
+expressionStatement)</li>
+<li>API operation: Log premium usage (with automatic data capture)</li>
+</ul>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L333">test/AutoBeTest.ts:333</a></li></ul></aside></section><section class="tsd-panel tsd-member"><h3 class="tsd-anchor-link" id="type"><span>type</span><a href="#type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">type</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;block&quot;</span></div><div class="tsd-comment tsd-typography"><p>Type discriminator.</p>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L265">test/AutoBeTest.ts:265</a></li></ul></aside></section></section></details></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary><div><a href="#statements"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>statements</span></a><a href="#type"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>type</span></a></div></details></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html">AutoBE</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>IErrorPredicate | AutoBE</title><meta name="description" content="Documentation for AutoBE"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">AutoBE</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="../modules/_autobe_interface.html">@autobe/interface</a></li><li><a href="../modules/_autobe_interface.AutoBeTest.html">AutoBeTest</a></li><li><a href="" aria-current="page">IErrorPredicate</a></li></ul><h1>Interface IErrorPredicate</h1></div><section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography"><p>General error validation predicate for TestValidator assertion.</p>
+<p>Generates TestValidator.error() call to verify that operations correctly
+throw errors under specific conditions. Used for testing error handling,
+business rule violations, and validation of both general errors and
+HTTP-specific error conditions in API operations.</p>
+<p><strong>Preferred over manual error testing</strong>: Use this instead of <code>IIfStatement</code>
+with throw statements or try-catch blocks for error validation.</p>
+<p>E2E testing scenarios:</p>
+<ul>
+<li>Testing business logic validation errors</li>
+<li>Verifying general exception handling in utility functions</li>
+<li>Confirming error throwing for invalid business operations</li>
+<li>Testing HTTP status code responses from API operations (400, 401, 403, 404,
+etc.)</li>
+<li>Testing authentication failures and authorization errors</li>
+<li>Validating API request validation errors and conflict responses</li>
+</ul>
+<p>AI function calling usage: Use when business scenarios should intentionally
+fail to test error handling, including both general errors and specific
+HTTP status code validation from API operations.</p>
+</div><div class="tsd-comment tsd-typography"></div></section><div class="tsd-signature"><span class="tsd-signature-keyword">interface</span> <span class="tsd-kind-interface">IErrorPredicate</span> <span class="tsd-signature-symbol">{</span><br/>    <a class="tsd-kind-property" href="#function">function</a><span class="tsd-signature-symbol">:</span> <a href="_autobe_interface.AutoBeTest.IArrowFunction.html" class="tsd-signature-type tsd-kind-interface">IArrowFunction</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#title">title</a><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">&amp;</span> <span class="tsd-signature-type">MinLength</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">1</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#type">type</a><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;errorPredicate&quot;</span><span class="tsd-signature-symbol">;</span><br/><span class="tsd-signature-symbol">}</span></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L2972">test/AutoBeTest.ts:2972</a></li></ul></aside><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h5 class="tsd-index-heading uppercase">Index</h5></summary><div class="tsd-accordion-details"><section class="tsd-index-section"><h3 class="tsd-index-heading">Properties</h3><div class="tsd-index-list"><a href="#function" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>function</span></a>
+<a href="#title" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>title</span></a>
+<a href="#type" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>type</span></a>
+</div></section></div></details></section></section><details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h2>Properties</h2></summary><section><section class="tsd-panel tsd-member"><h3 class="tsd-anchor-link" id="function"><span>function</span><a href="#function" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">function</span><span class="tsd-signature-symbol">:</span> <a href="_autobe_interface.AutoBeTest.IArrowFunction.html" class="tsd-signature-type tsd-kind-interface">IArrowFunction</a></div><div class="tsd-comment tsd-typography"><p>Arrow function containing the operation that should throw an error.</p>
+<p>Encapsulates the API operation or business logic that is expected to
+fail. The function should contain realistic API operations (using
+IApiOperateStatement within the function body) with invalid data or
+conditions that trigger appropriate error responses.</p>
+<p><strong>Note</strong>: The function body can contain IApiOperateStatement calls since
+this is specifically for testing API error conditions.</p>
+<p><strong>General Error Testing Patterns:</strong></p>
+<ul>
+<li>API calls with invalid business data that should trigger general errors</li>
+<li>API operations with malformed or missing required data</li>
+<li>Business rule violations that should be rejected by API operations</li>
+<li>General validation failures and custom error conditions</li>
+</ul>
+<p><strong>HTTP Error Testing Patterns:</strong></p>
+<p><strong>Authentication Errors (401)</strong>:</p>
+<ul>
+<li>API calls with invalid or expired tokens</li>
+<li>Login attempts with wrong credentials</li>
+<li>Access without required authentication headers</li>
+</ul>
+<p><strong>Authorization Errors (403)</strong>:</p>
+<ul>
+<li>API calls with insufficient user permissions</li>
+<li>Access to restricted resources by unauthorized users</li>
+<li>Operations requiring admin privileges by regular users</li>
+</ul>
+<p><strong>Validation Errors (400, 422)</strong>:</p>
+<ul>
+<li>API calls with missing required fields</li>
+<li>Invalid data format or type in request body</li>
+<li>Business rule violations in API parameters</li>
+</ul>
+<p><strong>Not Found Errors (404)</strong>:</p>
+<ul>
+<li>API calls with non-existent resource IDs</li>
+<li>Access to deleted or unavailable resources</li>
+<li>Invalid endpoint or resource paths</li>
+</ul>
+<p><strong>Conflict Errors (409)</strong>:</p>
+<ul>
+<li>Duplicate resource creation attempts</li>
+<li>Concurrent modification conflicts</li>
+<li>Business rule conflicts (e.g., duplicate emails)</li>
+</ul>
+<p><strong>Rate Limiting Errors (429)</strong>:</p>
+<ul>
+<li>Excessive API calls within time window</li>
+<li>Quota exceeded for API operations</li>
+<li>Throttling due to usage limits</li>
+</ul>
+<p><strong>Server Errors (5xx)</strong>:</p>
+<ul>
+<li>API calls that trigger internal server errors</li>
+<li>Operations that cause service unavailability</li>
+<li>Database connection or processing failures</li>
+</ul>
+<p>AI function construction: Create realistic error scenarios that test
+actual business constraints and error handling. Focus on API operation
+error conditions that should throw errors, including both general
+exceptions and specific HTTP status code responses.</p>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L3089">test/AutoBeTest.ts:3089</a></li></ul></aside></section><section class="tsd-panel tsd-member"><h3 class="tsd-anchor-link" id="title"><span>title</span><a href="#title" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">title</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">&amp;</span> <span class="tsd-signature-type">MinLength</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">1</span><span class="tsd-signature-symbol">&gt;</span></div><div class="tsd-comment tsd-typography"><p>Descriptive title explaining the error condition being tested.</p>
+<p>🚨 CRITICAL: This MUST be a simple string value, NOT an expression! 🚨</p>
+<p>❌ WRONG - DO NOT use expressions of any kind:</p>
+<ul>
+<li>{ type: &quot;binaryExpression&quot;, operator: &quot;+&quot;, left: &quot;Should fail&quot;, right: &quot;
+with invalid data&quot; }</li>
+<li>{ type: &quot;stringLiteral&quot;, value: &quot;some string&quot; }</li>
+<li>Any IExpression types - this is NOT an expression field!</li>
+</ul>
+<p>✅ CORRECT - Use direct string values only:</p>
+<ul>
+<li>&quot;Should fail business validation with invalid data&quot;</li>
+<li>Simple, complete descriptive text as a raw string</li>
+</ul>
+<p>Should clearly describe what error is expected and why it should occur.
+This helps understand the negative test case purpose and assists with
+debugging when expected errors don't occur.</p>
+<p>Examples:</p>
+<p><strong>General Error Testing:</strong></p>
+<ul>
+<li>&quot;Should fail business validation with invalid data&quot;</li>
+<li>&quot;Should throw error for duplicate entity creation&quot;</li>
+<li>&quot;Should reject operation with insufficient business context&quot;</li>
+<li>&quot;Should validate required business rule constraints&quot;</li>
+</ul>
+<p><strong>HTTP Error Testing:</strong></p>
+<ul>
+<li>&quot;Should return 401 for invalid authentication credentials&quot;</li>
+<li>&quot;Should return 403 for unauthorized customer access&quot;</li>
+<li>&quot;Should return 400 for missing required fields in registration&quot;</li>
+<li>&quot;Should return 404 for non-existent product ID&quot;</li>
+<li>&quot;Should return 409 for duplicate email registration&quot;</li>
+<li>&quot;Should return 422 for invalid business data format&quot;</li>
+<li>&quot;Should return 429 for rate limit exceeded&quot;</li>
+</ul>
+<p>AI title strategy: Focus on the specific error condition and business
+context that should trigger the failure. Include HTTP status codes when
+testing API error responses for clarity and debugging assistance.</p>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L3020">test/AutoBeTest.ts:3020</a></li></ul></aside></section><section class="tsd-panel tsd-member"><h3 class="tsd-anchor-link" id="type"><span>type</span><a href="#type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">type</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;errorPredicate&quot;</span></div><div class="tsd-comment tsd-typography"><p>Type discriminator.</p>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L2974">test/AutoBeTest.ts:2974</a></li></ul></aside></section></section></details></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary><div><a href="#function"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>function</span></a><a href="#title"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>title</span></a><a href="#type"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>type</span></a></div></details></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html">AutoBE</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>

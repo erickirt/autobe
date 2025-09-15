@@ -1,0 +1,133 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>IApiOperateStatement | AutoBE</title><meta name="description" content="Documentation for AutoBE"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><a href="../index.html" class="title">AutoBE</a><div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/><ul role="listbox" id="tsd-search-results"></ul><div id="tsd-search-status" aria-live="polite" aria-atomic="true"><div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb" aria-label="Breadcrumb"><li><a href="../modules/_autobe_interface.html">@autobe/interface</a></li><li><a href="../modules/_autobe_interface.AutoBeTest.html">AutoBeTest</a></li><li><a href="" aria-current="page">IApiOperateStatement</a></li></ul><h1>Interface IApiOperateStatement</h1></div><section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography"><p>API operation statement for SDK function calls with automatic response
+handling and data capture.</p>
+<p>This statement type handles the complete lifecycle of API operations
+including:</p>
+<ol>
+<li>Executing API function calls through the SDK</li>
+<li>Automatically capturing the response in a variable (when variableName is
+provided)</li>
+<li>Performing runtime type assertion using typia.assert<T>() for type safety</li>
+</ol>
+<p>This is the primary mechanism for all API interactions in E2E test
+scenarios, providing integrated data capture that eliminates the need for
+separate variable declarations.</p>
+<p>The statement automatically handles the complex pattern of API calling,
+response capturing, and type validation that is essential for robust E2E
+testing.</p>
+<p>AI function calling importance: Use this for ALL SDK API operations to
+ensure proper response handling, automatic data capture, and type safety in
+business test scenarios.</p>
+</div><div class="tsd-comment tsd-typography"></div></section><div class="tsd-signature"><span class="tsd-signature-keyword">interface</span> <span class="tsd-kind-interface">IApiOperateStatement</span> <span class="tsd-signature-symbol">{</span><br/>    <a class="tsd-kind-property" href="#argument">argument</a><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">null</span> <span class="tsd-signature-symbol">|</span> <a href="_autobe_interface.AutoBeTest.IObjectLiteralExpression.html" class="tsd-signature-type tsd-kind-interface">IObjectLiteralExpression</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#endpoint">endpoint</a><span class="tsd-signature-symbol">:</span> <a href="_autobe_interface.AutoBeOpenApi.IEndpoint.html" class="tsd-signature-type tsd-kind-interface">IEndpoint</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#type">type</a><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;apiOperateStatement&quot;</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#variablename">variableName</a><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">null</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">&amp;</span> <a href="../types/_autobe_interface.CamelPattern.html" class="tsd-signature-type tsd-kind-type-alias">CamelPattern</a><span class="tsd-signature-symbol">;</span><br/><span class="tsd-signature-symbol">}</span></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L360">test/AutoBeTest.ts:360</a></li></ul></aside><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h5 class="tsd-index-heading uppercase">Index</h5></summary><div class="tsd-accordion-details"><section class="tsd-index-section"><h3 class="tsd-index-heading">Properties</h3><div class="tsd-index-list"><a href="#argument" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>argument?</span></a>
+<a href="#endpoint" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>endpoint</span></a>
+<a href="#type" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>type</span></a>
+<a href="#variablename" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>variable<wbr/>Name?</span></a>
+</div></section></div></details></section></section><details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h2>Properties</h2></summary><section><section class="tsd-panel tsd-member"><h3 class="tsd-anchor-link" id="argument"><code class="tsd-tag">Optional</code><span>argument</span><a href="#argument" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">argument</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">null</span> <span class="tsd-signature-symbol">|</span> <a href="_autobe_interface.AutoBeTest.IObjectLiteralExpression.html" class="tsd-signature-type tsd-kind-interface">IObjectLiteralExpression</a></div><div class="tsd-comment tsd-typography"><p>Single argument object for the API function call.</p>
+<p><strong>CRITICAL</strong>: All API functions accept exactly one object parameter that
+contains all necessary data for the operation. This argument object is
+constructed based on the API operation's specification and follows a
+standardized structure.</p>
+<p><strong>⚠️ CRITICAL AI RESTRICTION: This MUST be an AST expression, NOT a JSON
+value! ⚠️</strong> <strong>❌ WRONG: { &quot;name&quot;: &quot;John&quot;, &quot;age&quot;: 30 } (raw JSON object)</strong>
+<strong>✅ CORRECT: IObjectLiteralExpression with proper AST structure</strong></p>
+<p><strong>Object Structure Rules:</strong></p>
+<p>The argument object is constructed by combining path parameters and
+request body data according to the following rules based on the target
+<a href="_autobe_interface.AutoBeOpenApi.IOperation.html" class="tsd-kind-interface">AutoBeOpenApi.IOperation</a>:</p>
+<ol>
+<li>
+<p><strong>Path Parameters</strong>: Each parameter from
+<code>AutoBeOpenApi.IOperation.parameters</code> becomes a property in the
+argument object, where:</p>
+<ul>
+<li>Property name: <code>AutoBeOpenApi.IParameter.name</code></li>
+<li>Property value: Expression matching <code>AutoBeOpenApi.IParameter.schema</code></li>
+<li>Example: <code>{ saleId: &quot;uuid-string&quot;, customerId: &quot;another-uuid&quot; }</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Request Body</strong>: If <code>AutoBeOpenApi.IOperation.requestBody</code> exists:</p>
+<ul>
+<li>Add a <code>body</code> property containing the request body data</li>
+<li>Value type: Object literal matching the requestBody's typeName schema</li>
+<li>Example: <code>{ body: { name: &quot;Product Name&quot;, price: 99.99 } }</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Combined Structure</strong>: When both path parameters and request body exist:</p>
+<pre><code class="typescript"><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-6">// Path parameters as individual properties</span><br/><span class="hl-0">  </span><span class="hl-4">&quot;saleId&quot;</span><span class="hl-0">: </span><span class="hl-4">&quot;uuid-value&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-4">&quot;customerId&quot;</span><span class="hl-0">: </span><span class="hl-4">&quot;another-uuid&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-6">// Request body as &#39;body&#39; property</span><br/><span class="hl-0">  </span><span class="hl-4">&quot;body&quot;</span><span class="hl-0">: {</span><br/><span class="hl-0">    </span><span class="hl-4">&quot;name&quot;</span><span class="hl-1">:</span><span class="hl-0"> </span><span class="hl-4">&quot;Updated Product&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">&quot;price&quot;</span><span class="hl-1">:</span><span class="hl-0"> </span><span class="hl-3">149.99</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-4">&quot;description&quot;</span><span class="hl-1">:</span><span class="hl-0"> </span><span class="hl-4">&quot;Enhanced product description&quot;</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span>
+</code><button type="button">Copy</button></pre>
+
+</li>
+</ol>
+<p><strong>Special Cases:</strong></p>
+<ul>
+<li><strong>No Parameters</strong>: When <code>parameters</code> is empty array AND <code>requestBody</code> is
+null, set this to <code>null</code> (the API function requires no arguments)</li>
+<li><strong>Only Path Parameters</strong>: When <code>requestBody</code> is null but <code>parameters</code>
+exist, create object with only path parameter properties</li>
+<li><strong>Only Request Body</strong>: When <code>parameters</code> is empty but <code>requestBody</code>
+exists, create object with only the <code>body</code> property</li>
+</ul>
+<p><strong>AI Construction Strategy:</strong></p>
+<ol>
+<li>Analyze the target <code>AutoBeOpenApi.IOperation</code> specification</li>
+<li>Extract all path parameters and create corresponding object properties</li>
+<li>If request body exists, add it as the <code>body</code> property</li>
+<li>Ensure all property values match the expected types from OpenAPI schema</li>
+<li>Use realistic business data that reflects actual API usage patterns</li>
+</ol>
+<p><strong>Type Safety Requirements:</strong></p>
+<ul>
+<li>Path parameter values must match their schema types (string, integer,
+etc.)</li>
+<li>Request body structure must exactly match the referenced schema type</li>
+<li>All required properties must be included with valid values</li>
+<li>Optional properties can be omitted or included based on test scenario
+needs</li>
+</ul>
+<p><strong>Business Context Examples:</strong></p>
+<pre><code class="typescript"><span class="hl-6">// GET /customers/{customerId}/orders/{orderId} (no request body)</span><br/><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-7">customerId</span><span class="hl-0">: </span><span class="hl-4">&quot;cust-123&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-7">orderId</span><span class="hl-0">: </span><span class="hl-4">&quot;order-456&quot;</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">// POST /customers (only request body)</span><br/><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-7">body</span><span class="hl-0">: {</span><br/><span class="hl-0">    </span><span class="hl-7">name</span><span class="hl-0">: </span><span class="hl-4">&quot;John Doe&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-7">email</span><span class="hl-0">: </span><span class="hl-4">&quot;john@example.com&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-7">phone</span><span class="hl-0">: </span><span class="hl-4">&quot;+1-555-0123&quot;</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">// PUT /customers/{customerId}/orders/{orderId} (both path params and body)</span><br/><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-7">customerId</span><span class="hl-0">: </span><span class="hl-4">&quot;cust-123&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-7">orderId</span><span class="hl-0">: </span><span class="hl-4">&quot;order-456&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">  </span><span class="hl-7">body</span><span class="hl-0">: {</span><br/><span class="hl-0">    </span><span class="hl-7">status</span><span class="hl-0">: </span><span class="hl-4">&quot;shipped&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-7">trackingNumber</span><span class="hl-0">: </span><span class="hl-4">&quot;TRACK123&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-7">estimatedDelivery</span><span class="hl-0">: </span><span class="hl-4">&quot;2024-12-25&quot;</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">// GET /health (no parameters or body)</span><br/><span class="hl-8">null</span>
+</code><button type="button">Copy</button></pre>
+
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L481">test/AutoBeTest.ts:481</a></li></ul></aside></section><section class="tsd-panel tsd-member"><h3 class="tsd-anchor-link" id="endpoint"><span>endpoint</span><a href="#endpoint" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">endpoint</span><span class="tsd-signature-symbol">:</span> <a href="_autobe_interface.AutoBeOpenApi.IEndpoint.html" class="tsd-signature-type tsd-kind-interface">IEndpoint</a></div><div class="tsd-comment tsd-typography"><p>API endpoint specification defining the operation to be called.</p>
+<p>Contains the HTTP method and path information that identifies which
+specific API operation from the OpenAPI specification should be invoked.
+This corresponds to operations defined in the AutoBeOpenApi.IDocument.</p>
+<p>The endpoint determines the expected parameter types, request body
+schema, and response body schema for proper type validation.</p>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L374">test/AutoBeTest.ts:374</a></li></ul></aside></section><section class="tsd-panel tsd-member"><h3 class="tsd-anchor-link" id="type"><span>type</span><a href="#type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">type</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;apiOperateStatement&quot;</span></div><div class="tsd-comment tsd-typography"><p>Type discriminator.</p>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L362">test/AutoBeTest.ts:362</a></li></ul></aside></section><section class="tsd-panel tsd-member"><h3 class="tsd-anchor-link" id="variablename"><code class="tsd-tag">Optional</code><span>variable<wbr/>Name</span><a href="#variablename" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">variableName</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">null</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">&amp;</span> <a href="../types/_autobe_interface.CamelPattern.html" class="tsd-signature-type tsd-kind-type-alias">CamelPattern</a></div><div class="tsd-comment tsd-typography"><p>Optional variable name for capturing the API response with automatic data
+handling.</p>
+<p><strong>Conditional Usage:</strong></p>
+<ul>
+<li>
+<p><code>string</code>: When API operation returns data that needs to be captured</p>
+<ul>
+<li>Creates: <code>const variableName: ApiResponseType =   typia.assert&lt;ResponseType&gt;(await api.operation(...))</code></li>
+<li>The response is automatically type-validated using typia.assert</li>
+<li>Variable can be referenced in subsequent test steps for data flow</li>
+</ul>
+</li>
+<li>
+<p><code>null</code>: When API operation returns void or response is not needed</p>
+<ul>
+<li>Creates: <code>await api.operation(...)</code></li>
+<li>No variable assignment or type assertion is performed</li>
+<li>Typically used for operations like delete, logout, or fire-and-forget
+calls</li>
+</ul>
+</li>
+</ul>
+<p><strong>AI Decision Logic:</strong></p>
+<ul>
+<li>Set to meaningful variable name when the response contains business data
+needed for subsequent operations</li>
+<li>Set to null when the operation is void or side-effect only</li>
+<li>Consider if subsequent test steps need to reference the response data for
+business logic or validations</li>
+</ul>
+<p>Variable naming should follow business domain conventions (e.g.,
+&quot;customer&quot;, &quot;order&quot;, &quot;product&quot;) rather than technical naming. This
+automatic data capture eliminates the need for separate variable
+declaration statements.</p>
+</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/erickirt/autobe/blob/3a4349debe8946b88112c08c9bd31ed9f04adc6e/packages/interface/src/test/AutoBeTest.ts#L515">test/AutoBeTest.ts:515</a></li></ul></aside></section></section></details></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg><h3>On This Page</h3></summary><div class="tsd-accordion-details"><details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary><div><a href="#argument"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>argument</span></a><a href="#endpoint"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>endpoint</span></a><a href="#type"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>type</span></a><a href="#variablename"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>variable<wbr/>Name</span></a></div></details></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html">AutoBE</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
